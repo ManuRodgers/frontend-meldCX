@@ -1,0 +1,52 @@
+:global {
+  .device {
+    position: relative;
+    background: #ff7043;
+    height: calc(85vh);
+    .space > div {
+      position: absolute;
+      border-radius: 100%;
+    }
+    .space {
+      top: calc(20vh);
+      background: #ff7043;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto 35px;
+      border: 1px solid #ff7043;
+      .planet {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 75px;
+        right: 75px;
+        width: 150px;
+        height: 150px;
+        background-color: #ff7043;
+        color: #fff;
+        /* box-shadow: inset -30px -30px 30px rgba(0,0,0,0.25); */
+      }
+      .orbit {
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        border: solid 1px #ff7043;
+      }
+      .sat {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        /* box-shadow: inset -10px -10px 10px rgba(0,0,0,0.25); */
+      }
+    }
+  }
+  .ant-layout-footer {
+    background: #d76844;
+    height: calc(15vh);
+    text-align: center;
+    line-height: calc(15vh);
+    padding: 0;
+  }
+}
