@@ -7,4 +7,5 @@
 5. http://localhost:8000/; (it should be automatically copied to clipboard then use advanced browser like chrome to test)
 ===
 # ps
- If there is any issues please free to contact me by email: manurodgersgoat@gmail.com.
+As for circles orbit around the number part, I get some hint from this link https://jsfiddle.net/h6ykr03a/13/
+If there is any issues please free to contact me by email: manurodgersgoat@gmail.com.
