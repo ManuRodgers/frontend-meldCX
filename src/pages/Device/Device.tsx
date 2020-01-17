@@ -1,7 +1,9 @@
 import React, { memo, useCallback, useState, useEffect, Fragment } from 'react';
-import { Layout, message } from 'antd';
-import useInterval from '@use-it/interval';
+import { Layout, message, Button } from 'antd';
+import store from 'store';
+import { router } from 'umi';
 import { setDevices } from '@/actions/deviceActions';
+import { notifyAsync } from '@/actions/authActions';
 import { connect } from 'dva';
 import { useDevices } from '@/hooks';
 
@@ -9,6 +11,8 @@ import './Device.less';
 
 const { Footer } = Layout;
 import { IDeviceSatellite, IGlobalState, IUmiComponent, IDevice } from '@/interfaces';
+import { ACCESS_TOKEN } from '@/util/constant';
+import Auth from '@/components/Auth';
 
 const mapStateToProps = ({ device }: IGlobalState) => ({
   device,
@@ -73,8 +77,25 @@ const Device: React.FunctionComponent<IDevicesProps> = ({ device, dispatch }) =>
     }
   }, [devices]);
 
+  const handleLogout: React.MouseEventHandler<HTMLElement> = useCallback(() => {
+    store.remove(ACCESS_TOKEN);
+    router.push('/');
+  }, []);
+  const handleNotify: React.MouseEventHandler<HTMLElement> = useCallback(() => {
+    dispatch(
+      notifyAsync({
+        name: 'Manu',
+        email: 'manurodgersgoat@gmail.com',
+        repoUrl: 'https://github.com/ManuRodgers/frontend-meldCX',
+        message:
+          'Hi mate, I am testing this notify end point to see what response I can get from server and I will notify you guys again after pushing my source code to the above github repoUrl.',
+      }),
+    );
+  }, []);
+
   return (
     <Fragment>
+      <Auth dispatch={dispatch} />
       <div className={'device'}>
         <div className="space">
           <div className="planet">
@@ -92,7 +113,14 @@ const Device: React.FunctionComponent<IDevicesProps> = ({ device, dispatch }) =>
             : null}
         </div>
       </div>
-      <Footer>footer</Footer>
+      <Footer>
+        <Button onClick={handleNotify} className={'notify'}>
+          NOTIFY
+        </Button>
+        <Button onClick={handleLogout} className={'logout'}>
+          LOG OUT
+        </Button>
+      </Footer>
     </Fragment>
   );
 };

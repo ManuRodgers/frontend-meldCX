@@ -43,10 +43,30 @@
     }
   }
   .ant-layout-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #d76844;
     height: calc(15vh);
     text-align: center;
     line-height: calc(15vh);
     padding: 0;
+    .notify {
+      height: calc(6vh);
+      background: #ffffff;
+      margin-right: 3px;
+      span {
+        color: #8f9395;
+      }
+    }
+    .logout {
+      height: calc(6vh);
+      background: #37464f;
+      margin-left: 3px;
+      border: #37464f;
+      span {
+        color: #c7c9cb;
+      }
+    }
   }
 }

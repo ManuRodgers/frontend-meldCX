@@ -7,6 +7,11 @@ export interface IUmiComponent extends RouterTypes<{}, { id: string }> {
 
 export interface IGlobalState {
   device: IDeviceModel;
+  auth: IAuthModel;
+}
+
+export interface IAuthModel {
+  accessToken: string;
 }
 
 export interface IDeviceModel {

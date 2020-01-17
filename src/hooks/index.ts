@@ -1,4 +1,3 @@
-import { useEffect, useMemo, useRef } from 'react';
 import request, { RequestOptionsInit } from 'umi-request';
 import { HTTPMethod } from 'http-method-enum';
 import useSWR, { ConfigInterface, keyInterface, responseInterface } from 'swr';
