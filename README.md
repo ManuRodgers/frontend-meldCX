@@ -5,6 +5,6 @@
 3. yarn;  (for installing all dependencies)
 4. yarn start; (after all dependencies installed then you can launch the dev server)
 5. http://localhost:8000/; (it should be automatically copied to clipboard then use advanced browser like chrome to test)
-
-#ps
+===
+# ps
  If there is any issues please free to contact me by email: manurodgersgoat@gmail.com.
