@@ -88,7 +88,7 @@ const Device: React.FunctionComponent<IDevicesProps> = ({ device, dispatch }) =>
         email: 'manurodgersgoat@gmail.com',
         repoUrl: 'https://github.com/ManuRodgers/frontend-meldCX',
         message:
-          'Hi mate, I am testing this notify end point to see what response I can get from server and I will notify you guys again after pushing my source code to the above github repoUrl.',
+          'Hi mate, I pushed the source code of this code test to above github repoUrl and I basically finished all the requirements mentioned. However I changed a little bit in terms of UI for login form part because I think it is better to use light color to style icon and placeholder in that situation. I am about to write readme Doc in github to tell you guys necessary information. Anyway it is a well designed code test and I hope to hear feedback from you guys!',
       }),
     );
   }, []);
